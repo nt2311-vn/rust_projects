@@ -1,5 +1,6 @@
 use clap::Parser;
 use colored::Colorize;
+use std::{fs, path};
 
 #[derive(Parser)]
 struct Options {
@@ -13,7 +14,7 @@ struct Options {
 
     #[clap(short = 'f', long = "file")]
     /// Load the cat picture from the specified files
-    catfile: Option<std::path::PathBuf>,
+    catfile: Option<path::PathBuf>,
 }
 
 fn main() {
@@ -25,10 +26,24 @@ fn main() {
     }
 
     let eye = if options.dead { "x" } else { "o" };
-    println!("{}", message.bright_yellow().underline().on_purple());
-    println!(" \\");
-    println!(" \\");
-    println!("    /\\_/\\");
-    println!("   ( {eye} {eye} )");
-    println!("   =( I )=");
+
+    match &options.catfile {
+        Some(path) => {
+            let cat_template =
+                fs::read_to_string(path).expect(&format!("could not read file {:?}", path));
+
+            let eye = format!("{}", eye.red().bold());
+            let cat_picture = cat_template.replace("{eye}", &eye);
+            println!("{}", message.bright_yellow().underline().on_purple());
+            println!("{}", &cat_picture);
+        }
+        None => {
+            println!("{}", message.bright_yellow().underline().on_purple());
+            println!(" \\");
+            println!(" \\");
+            println!("    /\\_/\\");
+            println!("   ( {eye} {eye} )");
+            println!("   =( I )=");
+        }
+    }
 }
