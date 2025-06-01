@@ -1,7 +1,11 @@
 use anyhow::{Context, Result};
 use clap::Parser;
 use colored::Colorize;
-use std::{fs, path};
+use std::{
+    fs,
+    io::{self, Read},
+    path,
+};
 
 #[derive(Parser)]
 struct Options {
@@ -24,7 +28,13 @@ struct Options {
 
 fn main() -> Result<()> {
     let options = Options::parse();
-    let message = options.messages;
+    let mut message = String::new();
+
+    if options.stdin {
+        io::stdin().read_to_string(&mut message)?;
+    } else {
+        message = options.messages;
+    };
 
     if message.to_lowercase() == "woof" {
         eprintln!("A cat shouldn't bark like a dog.")
