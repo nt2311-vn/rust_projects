@@ -9,7 +9,7 @@ use std::{
 
 #[derive(Parser)]
 struct Options {
-    #[clap(default_value = "Meow")]
+    #[clap(default_value = "Meow!")]
     /// What does the cat say?
     messages: String,
 
