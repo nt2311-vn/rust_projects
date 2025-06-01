@@ -17,7 +17,7 @@ struct Options {
     catfile: Option<path::PathBuf>,
 }
 
-fn main() {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     let options = Options::parse();
     let message = options.messages;
 
@@ -29,13 +29,16 @@ fn main() {
 
     match &options.catfile {
         Some(path) => {
-            let cat_template =
-                fs::read_to_string(path).expect(&format!("could not read file {:?}", path));
+            let cat_template = match fs::read_to_string(path) {
+                Ok(file_content) => file_content,
+                Err(e) => return Err(e.into()),
+            };
 
             let eye = format!("{}", eye.white().bold());
             let cat_picture = cat_template.replace("{eye}", &eye);
             println!("{}", message.bright_yellow().underline().on_purple());
             println!("{}", &cat_picture);
+            Ok(())
         }
         None => {
             println!("{}", message.bright_yellow().underline().on_purple());
@@ -44,6 +47,7 @@ fn main() {
             println!("    /\\_/\\");
             println!("   ( {eye} {eye} )");
             println!("   =( I )=");
+            Ok(())
         }
     }
 }
