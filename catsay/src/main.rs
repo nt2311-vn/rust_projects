@@ -13,6 +13,10 @@ fn main() {
     let options = Options::parse();
     let message = options.messages;
 
+    if message.to_lowercase() == "woof" {
+        eprintln!("A cat shouldn't bark like a dog.")
+    }
+
     let eye = if options.dead { "x" } else { "o" };
     println!("{}", message);
     println!(" \\");
