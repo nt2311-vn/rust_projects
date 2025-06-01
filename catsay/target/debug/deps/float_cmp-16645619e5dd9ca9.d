@@ -1,0 +1,10 @@
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay/target/debug/deps/libfloat_cmp-16645619e5dd9ca9.rmeta: /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/lib.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/macros.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ulps.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ulps_eq.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/eq.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ratio.rs
+
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay/target/debug/deps/float_cmp-16645619e5dd9ca9.d: /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/lib.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/macros.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ulps.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ulps_eq.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/eq.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ratio.rs
+
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/lib.rs:
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/macros.rs:
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ulps.rs:
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ulps_eq.rs:
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/eq.rs:
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/float-cmp-0.10.0/src/ratio.rs:
