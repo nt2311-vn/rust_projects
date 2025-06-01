@@ -32,7 +32,7 @@ fn main() {
             let cat_template =
                 fs::read_to_string(path).expect(&format!("could not read file {:?}", path));
 
-            let eye = format!("{}", eye.red().bold());
+            let eye = format!("{}", eye.white().bold());
             let cat_picture = cat_template.replace("{eye}", &eye);
             println!("{}", message.bright_yellow().underline().on_purple());
             println!("{}", &cat_picture);
