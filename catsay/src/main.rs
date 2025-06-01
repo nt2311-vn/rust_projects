@@ -1,4 +1,5 @@
 use clap::Parser;
+use colored::Colorize;
 
 #[derive(Parser)]
 struct Options {
@@ -9,6 +10,7 @@ struct Options {
     /// Make the cat apear dead
     dead: bool,
 }
+
 fn main() {
     let options = Options::parse();
     let message = options.messages;
@@ -18,7 +20,7 @@ fn main() {
     }
 
     let eye = if options.dead { "x" } else { "o" };
-    println!("{}", message);
+    println!("{}", message.bright_yellow().underline().on_purple());
     println!(" \\");
     println!(" \\");
     println!("    /\\_/\\");
