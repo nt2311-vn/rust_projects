@@ -1,3 +1,4 @@
+use anyhow::{Context, Result};
 use clap::Parser;
 use colored::Colorize;
 use std::{fs, path};
@@ -17,7 +18,7 @@ struct Options {
     catfile: Option<path::PathBuf>,
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() -> Result<()> {
     let options = Options::parse();
     let message = options.messages;
 
@@ -29,10 +30,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     match &options.catfile {
         Some(path) => {
-            let cat_template = match fs::read_to_string(path) {
-                Ok(file_content) => file_content,
-                Err(e) => return Err(e.into()),
-            };
+            let cat_template = fs::read_to_string(path)
+                .with_context(|| format!("Could not read file {:?}", path))?;
 
             let eye = format!("{}", eye.white().bold());
             let cat_picture = cat_template.replace("{eye}", &eye);
