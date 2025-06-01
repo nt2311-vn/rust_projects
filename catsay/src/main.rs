@@ -6,9 +6,14 @@ struct Options {
     #[clap(default_value = "Meow")]
     /// What does the cat say?
     messages: String,
+
     #[clap(short = 'd', long = "dead")]
     /// Make the cat apear dead
     dead: bool,
+
+    #[clap(short = 'f', long = "file")]
+    /// Load the cat picture from the specified files
+    catfile: Option<std::path::PathBuf>,
 }
 
 fn main() {
