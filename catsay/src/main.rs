@@ -5,14 +5,19 @@ struct Options {
     #[clap(default_value = "Meow")]
     /// What does the cat say?
     messages: String,
+    #[clap(short = 'd', long = "dead")]
+    /// Make the cat apear dead
+    dead: bool,
 }
 fn main() {
     let options = Options::parse();
     let message = options.messages;
+
+    let eye = if options.dead { "x" } else { "o" };
     println!("{}", message);
     println!(" \\");
     println!(" \\");
     println!("    /\\_/\\");
-    println!("   ( O O )");
+    println!("   ( {eye} {eye} )");
     println!("   =( I )=");
 }
