@@ -48,6 +48,30 @@ fn input_step(siv: &mut Cursive) {
                     message: &message,
                     dead: is_dead,
                 };
+
+                result_step(s, &options);
             }),
+    );
+}
+
+fn result_step(siv: &mut Cursive, options: &CatsayOptions) {
+    let eye = if options.dead { "x" } else { "o" };
+
+    let cat_text = format!(
+        "{msg}
+\\
+ \\
+   /\\_/\\
+  ( {eye} {eye} )
+  =( I )=",
+        msg = options.message,
+        eye = eye
+    );
+
+    siv.pop_layer();
+    siv.add_layer(
+        Dialog::text(cat_text)
+            .title("The cat says...")
+            .button("OK", |s| s.quit()),
     );
 }
