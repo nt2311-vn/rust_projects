@@ -1,0 +1,5 @@
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay-tui/target/debug/deps/libowning_ref-58f55acfe75576f6.rmeta: /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/owning_ref-0.4.1/src/lib.rs
+
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay-tui/target/debug/deps/owning_ref-58f55acfe75576f6.d: /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/owning_ref-0.4.1/src/lib.rs
+
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/owning_ref-0.4.1/src/lib.rs:
