@@ -1,5 +1,3 @@
-use std::path::Path;
-
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, Box as GtkBox, Image, Label, Orientation};
 
@@ -14,14 +12,10 @@ fn main() {
         let label = Label::new(Some("Meow!\n    \\\n    \\"));
         layout_box.add(&label);
 
-        let image_path = "./images/cat.png";
-        if Path::new(image_path).exists() {
-            let cat_image = Image::from_file(image_path);
-            layout_box.add(&cat_image);
-        } else {
-            let error_label = Label::new(Some("Image not found!"));
-            layout_box.add(&error_label);
-        }
+        let image_path = "src/images/cat.png";
+
+        let cat_image = Image::from_file(image_path);
+        layout_box.add(&cat_image);
         window.add(&layout_box);
         window.show_all();
     });
