@@ -12,7 +12,7 @@ fn main() {
         let label = Label::new(Some("Meow!\n    \\\n    \\"));
         layout_box.add(&label);
 
-        let image_path = "src/images/cat.png";
+        let image_path = "images/cat.png";
 
         let cat_image = Image::from_file(image_path);
         layout_box.add(&cat_image);
