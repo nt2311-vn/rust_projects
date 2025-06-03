@@ -1,0 +1,1 @@
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay-gui-glade/target/debug/catsay-gui-glade: /home/nt2311-vn/Projects/Rust/rust_projects/catsay-gui-glade/src/layout.glade /home/nt2311-vn/Projects/Rust/rust_projects/catsay-gui-glade/src/main.rs

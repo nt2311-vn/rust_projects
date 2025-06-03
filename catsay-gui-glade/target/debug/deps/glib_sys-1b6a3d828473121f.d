@@ -1,0 +1,6 @@
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay-gui-glade/target/debug/deps/libglib_sys-1b6a3d828473121f.rmeta: /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/lib.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/manual.rs
+
+/home/nt2311-vn/Projects/Rust/rust_projects/catsay-gui-glade/target/debug/deps/glib_sys-1b6a3d828473121f.d: /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/lib.rs /home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/manual.rs
+
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/lib.rs:
+/home/nt2311-vn/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/glib-sys-0.18.1/src/manual.rs:
