@@ -2,7 +2,7 @@
 name = "hello-wasm"
 version = "0.1.0"
 authors = ["nt2311-vn <nguyentoan231196@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
