@@ -25,7 +25,9 @@ fn build_ui(app: &gtk::Application) {
         message_output.set_text(&format!("{}\n \\n \\", message_input.text().as_str()));
         let is_dead = is_dead_switch.is_active();
         if is_dead {
-            image_output_clone.set_from_file(Some("/images/cat.png"));
+            image_output_clone.set_from_file(Some("./cat_dead.png"));
+        } else {
+            image_output_clone.set_from_file(Some("./cat.png"));
         }
         image_output_clone.show();
     });
