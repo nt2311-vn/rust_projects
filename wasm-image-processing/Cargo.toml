@@ -2,7 +2,7 @@
 name = "wasm-image-processing"
 version = "0.1.0"
 authors = ["nt2311-vn <nguyentoan231196@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -18,7 +18,7 @@ wasm-bindgen = "0.2.84"
 # all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
 # code size when deploying.
 console_error_panic_hook = { version = "0.1.7", optional = true }
-image = "0.25.6"
+image = "0.24.5"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.34"
