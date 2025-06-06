@@ -1,4 +1,4 @@
-import * as wasm from "hello-wasm-pack";
+import * as wasmImage from "wasm-image-processing";
 
 function setup(event) {
 	const fileInput = document.getElementById("image-upload");
@@ -19,6 +19,37 @@ function setup(event) {
 				.getContext("2d")
 				.drawImage(image, 0, 0, canvas.width, canvas.height);
 		});
+	});
+
+	const shrinkButton = document.getElementById("shrink");
+	shrinkButton.addEventListener("click", function (event) {
+		const canvas = document.getElementById("preview");
+		const canvasContext = canvas.getContext("2d");
+		const imageBuffer = canvasContext.getImageData(
+			0,
+			0,
+			canvas.width,
+			canvas.height,
+		);
+
+		const outputBuffer = wasmImage.shrink_by_half(
+			imageBuffer.data,
+			canvas.width,
+			canvas.height,
+		);
+
+		const u8OutputBuffer = new ImageData(
+			new Uint8ClampedArray(outputBuffer),
+			canvas.width / 2,
+			canvas.height / 2,
+		);
+
+		canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+
+		canvas.width = canvas.width / 2;
+		canvas.height = canvas.height / 2;
+
+		canvasContext.putImageData(u8OutputBuffer, 0, 0);
 	});
 }
 
